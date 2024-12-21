@@ -1,0 +1,17 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Wavelog
+version: "1.9"
+slug: wavelog
+description: Wavelog Ham Radio logbook
+map:
+  - type: addon_config
+    read_only: false
+    path: /var/www/html/application/config/docker
+arch:
+  - amd64
+init: false
+environment:
+  CI_ENV: docker
+startup: services
+ports:
+  80/tcp: 8086
