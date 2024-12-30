@@ -2,8 +2,8 @@
 set -e
 
 mkdir -p /data/userdata /data/uploads
-chgrp www-data /var/www/html/application/config/docker /data/*
-chmod g+wx /var/www/html/application/config/docker /data/*
+chgrp -R www-data /var/www/html/application/config/docker /data/*
+chmod -R g+wx /var/www/html/application/config/docker /data/*
 
 if [ -e /var/www/html/application/config/docker/database.php ]; then
         touch /var/www/html/install/.lock
