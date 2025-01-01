@@ -15,3 +15,7 @@ environment:
 startup: services
 ports:
   80/tcp: 8086
+options:
+  access_log: False
+schema:
+  access_log: bool
