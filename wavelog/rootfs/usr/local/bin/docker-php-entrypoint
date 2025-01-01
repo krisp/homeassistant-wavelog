@@ -5,7 +5,7 @@ mkdir -p /data/userdata /data/uploads
 chgrp -R www-data /var/www/html/application/config/docker /data/*
 chmod -R g+rwX /var/www/html/application/config/docker /data/*
 
-if [ `grep access_log /data/options.json | awk '{print $2}'` == "false" ]; then
+ if [ "`grep access_log /data/options.json | awk '{print $2}'`" = "false" ]; then
         rm /var/log/apache2/access.log /var/log/apache2/other_vhosts_access.log
         ln -s /dev/null /var/log/apache2/access.log
         ln -s /dev/null /var/log/apache2/other_vhosts_access.log
