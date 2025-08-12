@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Wavelog
-version: "2.0.4"
+version: "2.0.7"
 slug: wavelog
 description: Wavelog Ham Radio logbook
 map:
